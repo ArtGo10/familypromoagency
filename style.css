@@ -32,18 +32,18 @@
 .logo {
     width: 106px;
     height: 50px;
-    background-image: url('images/logo.png');
+    background-image: url('./images/logo.png');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
 }
 
-#menu-icon {
+.menu-icon {
     display: none;
 }
 
 .header-scrolled .logo {
-    background-image: url('images/logo-white.png');
+    background-image: url('./images/logo-white.png');
 }
 
 .menu {
@@ -120,7 +120,7 @@
 }
 
 .hero {
-    background-image: url('images/hero.png');
+    background-image: url('./images/hero.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -153,11 +153,11 @@
 }
 
 .highlighted-white-text {
-    background-image: url('images/vector_white.png');
+    background-image: url('./images/vector_white.png');
 }
 
 .highlighted-black-text {
-    background-image: url('images/vector_black.png');
+    background-image: url('./images/vector_black.png');
 }
 
 .form {
@@ -455,7 +455,7 @@
     right: 92px;
     transform: translate(50%, -50%);
     background: #FFFFFF;
-    background-image: url('images/right_arrow.png');
+    background-image: url('./images/right_arrow.png');
     background-size: 24px 24px;
     background-repeat: no-repeat;
     background-position: center;
