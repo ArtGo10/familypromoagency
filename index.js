@@ -5,6 +5,15 @@ const pageLinks = document.querySelectorAll('.page-link');
 const header = document.getElementById('header');
 const menuBtn = document.querySelector('.menu-icon');
 const menu = document.querySelector('.menu');
+const advSliderWrapper = document.querySelector('.advantages-slider-inner');
+const advSlides = document.querySelectorAll('.advantages-slide');
+const advLeftArrows = document.querySelectorAll('.adv-left-arrow');
+const advRightArrows = document.querySelectorAll('.adv-right-arrow');
+const servSliderWrapper = document.querySelector('.services-wrapper');
+const servHeader = document.querySelector('.services-header');
+const servContent = document.querySelector('.services-content');
+const servLeftArrow = document.querySelector('.serv-left-arrow');
+const servRightArrow = document.querySelector('.serv-right-arrow');
 
 const bottomOfHeader = header.offsetTop + header.offsetHeight;
 
@@ -45,3 +54,31 @@ window.addEventListener('scroll', () => {
 
     window.scrollY >= bottomOfHeader ? header.classList.add('header-scrolled') : header.classList.remove('header-scrolled')
 });
+
+function preventSlidersFromScrolling() {
+    advSliderWrapper.scrollTo(0, 0);
+    servSliderWrapper.scrollTo(0, 0);
+}
+
+advSliderWrapper.addEventListener('scroll', preventSlidersFromScrolling);
+servSliderWrapper.addEventListener('scroll', preventSlidersFromScrolling);
+
+function addClickForAdvArrows (el, idx) {
+    el.addEventListener('click', () => {
+        advSlides.forEach(slide => {
+            const width = slide.getBoundingClientRect().width;
+            slide.style.transform = `translateX(-${idx * (width + 24)}px)`;
+        });
+    })
+}
+
+function addClickForServArrows (toLeft = true) {
+    const width = servHeader.getBoundingClientRect().width;
+    servHeader.style.transform = `translateX(-${toLeft ? 0 : width + 8}px)`;
+    servContent.style.transform = `translateX(-${toLeft ? 0 : width + 8}px)`;
+}
+
+advLeftArrows.forEach((arr, idx) => addClickForAdvArrows(arr, idx));
+advRightArrows.forEach((arr, idx) => addClickForAdvArrows(arr, idx + 1));
+servLeftArrow.addEventListener('click', () => addClickForServArrows(true));
+servRightArrow.addEventListener('click', () => addClickForServArrows(false));
