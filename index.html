@@ -39,30 +39,31 @@
                 <br />
                 Campaigns
             </div>
-            <form class="form" action="">
+            <form class="form">
                 <h4 class="form-title">
                     Harness Our Expertise to
                     <br />
                     Enhance Your Business
                 </h4>
                 <div class="form-inputs-container">
+                    <input type="hidden" name="contact_number">
                     <div class="form-input-wrapper">
                         <label class="form-input-label" for="fullName">Full name*</label>
-                        <input class="form-input" id="fullName" type="text" name="fullName">
+                        <input class="form-input" type="text" name="fullName" required>
                     </div>
                     <div class="form-input-wrapper">
                         <label class="form-input-label" for="email">Work email*</label>
-                        <input class="form-input" id="email" type="email" name="email">
+                        <input class="form-input" type="email" name="email" required>
                     </div>
                     <div class="form-input-wrapper">
                         <label class="form-input-label" for="companyName">Company name*</label>
-                        <input class="form-input" id="companyName" type="text" name="companyName">
+                        <input class="form-input" type="text" name="companyName" required>
                     </div>
                     <div class="form-input-wrapper">
                         <label class="form-input-label" for="comment">Comment (optional)</label>
-                        <input maxlength="350" class="form-input" id="comment" type="text" name="comment">
+                        <input maxlength="350" class="form-input" type="text" name="comment">
                         <span class="form-input-counter">
-                            <span id="form-input-symbols-counter">0</span>/350
+                            <span class="form-input-symbols-counter">0</span>/350
                         </span>
                     </div>
                 </div>
@@ -574,25 +575,26 @@ Maryna is passionate about growing their family business with Illia. They aim to
             One of our managers will get in touch with you within a few
             <br />
             business hours to discuss your needs</p>
-        <form class="form offer-form" action="">
+        <form class="form offer-form">
             <div class="form-inputs-container">
+                <input type="hidden" name="contact_number">
                 <div class="form-input-wrapper">
                     <label class="form-input-label" for="fullName-offer">Full name*</label>
-                    <input class="form-input" id="fullName-offer" type="text" name="fullName-offer">
+                    <input class="form-input" type="text" name="fullName" required>
                 </div>
                 <div class="form-input-wrapper">
                     <label class="form-input-label" for="email-offer">Work email*</label>
-                    <input class="form-input" id="email-offer" type="email" name="email-offer">
+                    <input class="form-input" type="email" name="email" required>
                 </div>
                 <div class="form-input-wrapper">
                     <label class="form-input-label" for="companyName-offer">Company name*</label>
-                    <input class="form-input" id="companyName-offer" type="text" name="companyName-offer">
+                    <input class="form-input" type="text" name="companyName" required>
                 </div>
                 <div class="form-input-wrapper">
                     <label class="form-input-label" for="comment-offer">Comment (optional)</label>
-                    <input maxlength="350" class="form-input" id="comment-offer" type="text" name="comment-offer">
+                    <input maxlength="350" class="form-input" type="text" name="comment">
                     <span class="form-input-counter">
-                        <span id="form-input-symbols-counter">0</span>/350
+                        <span class="form-input-symbols-counter">0</span>/350
                     </span>
                 </div>
             </div>
@@ -621,30 +623,31 @@ Maryna is passionate about growing their family business with Illia. They aim to
         <div class="modal">
             <div class="modal-content">
                 <img class="modal-img" src="images/modal.png" alt="modal-image">
-                <form class="form modal-form" action="">
+                <form class="form modal-form">
                     <h4 class="form-title">
                         Harness Our Expertise
                         <br />
                         to <span class="orange-text">Enhance Your Business</span>
                     </h4>
                     <div class="form-inputs-container">
+                        <input type="hidden" name="contact_number">
                         <div class="form-input-wrapper">
                             <label class="form-input-label" for="fullName">Full name*</label>
-                            <input class="form-input" id="fullName" type="text" name="fullName">
+                            <input class="form-input" type="text" name="fullName" required>
                         </div>
                         <div class="form-input-wrapper">
                             <label class="form-input-label" for="email">Work email*</label>
-                            <input class="form-input" id="email" type="email" name="email">
+                            <input class="form-input" type="email" name="email" required>
                         </div>
                         <div class="form-input-wrapper">
                             <label class="form-input-label" for="companyName">Company name*</label>
-                            <input class="form-input" id="companyName" type="text" name="companyName">
+                            <input class="form-input" type="text" name="companyName" required>
                         </div>
                         <div class="form-input-wrapper">
                             <label class="form-input-label" for="comment">Comment (optional)</label>
-                            <input maxlength="350" class="form-input" id="comment" type="text" name="comment">
+                            <input maxlength="350" class="form-input" type="text" name="comment">
                             <span class="form-input-counter">
-                                <span id="form-input-symbols-counter">0</span>/350
+                                <span class="form-input-symbols-counter">0</span>/350
                             </span>
                         </div>
                     </div>
@@ -656,6 +659,7 @@ Maryna is passionate about growing their family business with Illia. They aim to
             </div>
         </div>
     </div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script src="index.js"></script>
 </body>
 </html>

@@ -161,6 +161,7 @@
 }
 
 .form {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -173,6 +174,19 @@
     overflow: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
+}
+
+.form p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.form.sent .form-title, .form.sent .form-inputs-container, .form.sent .form-button {
+    visibility: hidden;
 }
 
 .form-title {
@@ -1285,7 +1299,9 @@
     .form {
         align-items: center;
         gap: 32px;
-        padding: 48px 16px;
+        padding: 16px;
+        gap: 32px;
+        width: 288px;
     }
 
     .hero-wrapper {
@@ -1299,12 +1315,6 @@
         font-size: 30px;
         line-height: 36px;
         word-break: break-word;
-    }
-
-    .form {
-        padding: 16px;
-        gap: 32px;
-        width: 288px;
     }
 
     .form-title {
@@ -1570,6 +1580,11 @@
 @media screen and (max-width: 767px) {
     .menu.opened {
         padding: 48px 16px;
+    }
+
+    .form p {
+        font-size: 20px;
+        font-weight: 500;
     }
 
     .hero {
