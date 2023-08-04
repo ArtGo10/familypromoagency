@@ -51,18 +51,17 @@ forms.forEach(form => {
     form.addEventListener('submit', function (event) {
         event.preventDefault();
         if (!form.fullName?.value || !form.email?.value || !form.companyName?.value) return;
-        this.contact_number.value = Math.random() * 100000 | 0;
-        // emailjs.sendForm('service_svvy1sj', 'template_c68wutp', this)
-        //     .then(function() {
-        //         form.reset();
-        //         console.log('SUCCESS!');
-        //     }, function(error) {
-        //         console.log('FAILED...', error);
-        //     });
-        form.classList.add('sent');
-        const p = document.createElement('p');
-        p.innerText = 'Your request has been sent. Our team will contact you as soon as possible.';
-        form.appendChild(p);
+        this.emailjsNumber.value = Math.random() * 100000 | 0;
+        emailjs.sendForm('service_svvy1sj', 'template_c68wutp', this)
+            .then(function() {
+                form.reset();
+                form.classList.add('sent');
+                const p = document.createElement('p');
+                p.innerText = 'Your request has been sent. Our team will contact you as soon as possible.';
+                form.appendChild(p);
+            }, function(error) {
+                console.log('FAILED...', error);
+            });
     });
     form.addEventListener('change', function (event) {
         event.target.value = event.target.value.trim();
